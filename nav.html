@@ -1,0 +1,30 @@
+<div id="pts">
+    <div id="settings" onclick="popbox()">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACBklEQVRIid2UsWsTURzHv79LAmmRgnQQRMHJQgNBL3cSsrShQwUXCw5uunYqUlDoX+AiiENXwcnNLA66xLoleXfSgwjdBBcFURDpXY7jvi53IXmX5E6Kg36nu+/7/T7fd+/ee8C/LilSpJTaA/BUs/csy3qW12sUnMj1gt6fB/T7/RqAjRlDm67rruf1Ty0RSUMp1QXwTUReAtgEsKvXTbfwUESOSN41DGPVNM22iHBmgOM490k+z5vVIpG8Z9v2i0zAcDg85/v+CYCLZwkA8DWKoqvNZvMnMPEPfN8/WAD/TPJOEAQrQRCsANgBcDKn9kKpVHqUvpTTBxEZkDwFsKzDwzC81mq1vk94Hc/zjsIwPAZwWas/FZFB+jL+gkaj8YpkG4A/WU3ygQYHANTr9R8A9jXbJ9m2LKuTCQAA27b7AOJJbzQavdXhqaIoeqNZccIYq+hBm6lyuZx7E0wFDAaDG7pXrVa35jWLyLbOSxjZAMdxdkSkC2BJa3rsed55Hd7r9VZJPtHsJRHpKqVup8Z4F5G0kd1BALAWhuGxUmo/XfNKpXIzgV+aUb+csDrA3zloX6IoWssctFqt9gvAwRnhIPkwhQM5lx3JDRHZxfzdFovIIcn3hS67WXJddz2O49cArmhDnwzDuGWa5sdF/bnnIAG8032S3Tx4oYBEH3RDRDLe/6nfMIjc7kyOTbsAAAAASUVORK5CYII=">
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closebox()">&times;</span>
+            <h3>Settings</h3>
+            <label for="lang">Language</label> 
+            <!-- <div class="lang-select"> -->
+                <select id="lang" name="lang">
+                    <option value="EN" id="lang-en">EN</option>
+                    <option value="DE" id="lang-de">DE</option>
+                </select>
+            <!-- </div> --><br/><br/>
+            <label for="tooltips">Skill Tooltips</label> <input type="checkbox" id="settingsTooltips" checked="checked" name="tooltips"/><br/><br/>
+            <label for="level">Character Level</label> <input type="number" name="level" id="settingsLevel" min="1"/><br/><br/>
+            <button onclick="resetSettings()">Reset Settings</button>
+            <input type="submit" value="Save Settings" id="savesettings" onclick="updateSettings()"/>
+        </div>
+    </div>
+<ul class="nav">
+    <li><a href="../">I Love Fried Orc</a></li>
+    <li><a href="./">Trait Planner</a></li>
+    <li id="classy">[Class]</li>
+    <li id="nav-new"><a href="./community">Community Builds</a></li>
+    <li style="background:linear-gradient(#7289da,#485fb5)"><a href="https://discord.gg/S42Bgaz" target="_blank">Discord</a></li>
+</ul>
+&nbsp;  &nbsp; 
+Points Available: <b><span id="pts_av">95</span></b> | Points Spent: <b><span id="pts_sp">0</span></b> &nbsp;<button id="reset" onclick="reset()">Reset All</button> &#x2764; <label for="tName">Name your build: </label><input type="text" id="tName" name="tName" placeholder="leave blank for random" /> &nbsp; <label for="commshare"><input type="checkbox" name="commshare" id="commshare" /> Share to Community?</label> &nbsp; <input type="submit" id="share" value="Save This!" onclick="share()" /></div><br/>
